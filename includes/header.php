@@ -24,7 +24,7 @@ include_once 'includes/session.php'?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="css/sitestyle.css">
-    <title>Attendance - <?php echo "$title"?></title>
+    <title>Kelly's Computer Service - <?php echo "$title"?></title>
 </head>
 
 
@@ -50,7 +50,7 @@ include_once 'includes/session.php'?>
                             <li class="nav-item"><a class="nav-link active" href="index.php" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">Home </a></li>
                             <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Services </a>
                                 <div class="dropdown-menu" style="background: rgb(0,123,255);">
-                                <a class="dropdown-item" href="ManagedITServices.php" style="color: rgb(251,1,1);">Managed IT Services</a>
+                                <a class="dropdown-item" href="manageditservices.php" style="color: rgb(251,1,1);">Managed IT Services</a>
                                 <a class="dropdown-item" href="softwaredevelopmentservices.php" style="color: rgb(251,1,1);">Software Development Services</a>
                                 <a class="dropdown-item" href="services.html" style="color: rgb(251,1,1);">Price Packages</a>
                                 </div>

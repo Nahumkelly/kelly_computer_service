@@ -1,5 +1,5 @@
 <?php
-$title = "Index";
+$title = "Sign Up";
 require_once "includes/header2.php";
 require_once 'db/conn.php';
 
@@ -7,7 +7,7 @@ require_once 'db/conn.php';
 $result = $crud->getSpecialties();
 ?>
 
-<h1 class="text-center">Registration for IT Conference</h1>
+<h1 class="text-center">Registration</h1>
 <div class="row">
     <div class="col">
         <!-- 1 of 3 -->

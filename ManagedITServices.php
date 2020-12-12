@@ -1,5 +1,5 @@
 <?php
-$title = "Index";
+$title = "Managed IT Services";
 require_once "includes/header.php";
 require_once 'db/conn.php';
 
