@@ -313,7 +313,7 @@ div.description {
 }
 
 h4 {
-    font-size: 20px !important
+    font-size: 20px!important
 }
 
 .description {
@@ -328,11 +328,11 @@ div.description:hover {
 }
 
 .d-block {
-    display: block !important
+    display: block!important
 }
 
 .w-100 {
-    width: 100% !important
+    width: 100%!important
 }
 
 a {
@@ -435,7 +435,7 @@ a:active {
 }
 
 .text-center {
-    text-align: center !important
+    text-align: center!important
 }
 
 img {
@@ -547,7 +547,7 @@ button {
 }
 
 .w-100.d-block {
-    height: 400px !important
+    height: 400px!important
 }
 
 .navigation-clean-button {
@@ -667,7 +667,7 @@ button {
 
 .navigation-clean-button.navbar-default .navbar-nav>li>a:focus,
 .navigation-clean-button.navbar-default .navbar-nav>li>a:hover {
-    color: #e04c40 !important;
+    color: #e04c40!important;
     border-top: 1px solid #e04c40;
     background-color: transparent;
     transition: background-color .25s, _ .25s
@@ -747,7 +747,7 @@ p.navbar-text.navbar-right.actions {
 }
 
 a.navbar-link.login:hover {
-    color: red !important
+    color: red!important
 }
 
 .btn.focus,
