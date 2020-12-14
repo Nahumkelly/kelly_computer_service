@@ -3,8 +3,8 @@ $title = "Privacy Policy";
 require_once "includes/header.php";
 require_once 'db/conn.php';
 
-//get all Specialties
-$result = $crud->getSpecialties();
+//get all Gender
+$result = $crud->getGender();
 ?>
         <div>
             <div class="row"><div class="col">

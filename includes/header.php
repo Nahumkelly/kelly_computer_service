@@ -17,7 +17,7 @@ include_once 'includes/session.php'?>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
@@ -33,7 +33,7 @@ include_once 'includes/session.php'?>
         <div>
             <div class="caption v-middle text-center">
                 <h1 class="cd-headline clip">
-                    <span class="blc"><img  style="width:300px" src="assets/img/logo2.png" alt="Slide Image"/>     </span>
+                    <span class="blc"><img  style="width:300px" src="img/logo2.png" alt="Slide Image"/>     </span>
 
                     <span class="cd-words-wrapper">
 			              <b class="is-visible"> KELLY'S</b>
@@ -59,8 +59,15 @@ include_once 'includes/session.php'?>
                             <li class="nav-item"><a class="nav-link" href="about.php">About </a></li>
                             <li class="nav-item"><a class="nav-link" href="policy.php">Privacy Policy<br></a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.php">Contact </a></li>
+                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link visible" data-toggle="dropdown" aria-expanded="false" href="#">Admin Panel</a>
+                                    <div class="dropdown-menu" style="background: rgb(0,123,255);">
+                                    <a class="dropdown-item" href="viewrecords.php" style="color: rgb(251,1,1);">View Customers</a>
+                                    <a class="dropdown-item" href="softwaredevelopmentservices.html" style="color: rgb(251,1,1);">View Products</a>
+                                        
+                                    </div>
+                                </li>
                         </ul>
-                        <p class="ml-auto navbar-text actions"><a class="login" href="login.php">Log In</a> <a class="btn btn-light action-button" role="button" href="register.php" style="color: rgba(247,249,246,0.9);box-shadow: 0px 0px rgba(84,247,3,0.9);">Sign Up</a></p>
+                        <p class="ml-auto navbar-text actions"><a class="login" href="login.php">Log In</a> <a class="btn btn-light action-button" role="button" href="registered.php" style="color: rgba(247,249,246,0.9);box-shadow: 0px 0px rgba(84,247,3,0.9);">Sign Up</a></p>
                     </div>
                 </div>
             </nav>
@@ -68,7 +75,7 @@ include_once 'includes/session.php'?>
                 <div class="carousel-inner" role="listbox">
 
                     <div class="carousel-item active">
-                        <img src="assets/img/slider1.jpg" alt="Slide Image" class="w-100 d-block" />
+                        <img src="img/slider1.jpg" alt="Slide Image" class="w-100 d-block" />
                         <div class="description text-center">
                             <br>
                             <h4>Signs Plus Phoenix Location</h4>
@@ -82,7 +89,7 @@ include_once 'includes/session.php'?>
                     </div>
 
                     <div class="carousel-item">
-                        <img class="w-100 d-block" src="assets/img/slider2.jpg" alt="Slide Image" />
+                        <img class="w-100 d-block" src="img/slider2.jpg" alt="Slide Image" />
                         <div class="description text-center">
                             <br>
                             <h4>Signs Plus Prescott Location</h4>
@@ -94,7 +101,7 @@ include_once 'includes/session.php'?>
                     </div>
 
                     <div class="carousel-item">
-                        <img class="w-100 d-block" src="assets/img/slider3.png" alt="Slide Image" />
+                        <img class="w-100 d-block" src="img/slider3.png" alt="Slide Image" />
                         <div class="description text-center">
                             <br>
                             <h4>Inventive</h4>
@@ -111,7 +118,7 @@ include_once 'includes/session.php'?>
                     </div>
 
                     <div class="carousel-item">
-                        <img class="w-100 d-block" src="assets/img/slider4.jpg" alt="Slide Image" />
+                        <img class="w-100 d-block" src="img/slider4.jpg" alt="Slide Image" />
                         <div class="description text-center">
                             <br>
                             <h4>Partnerships</h4>
@@ -129,7 +136,7 @@ include_once 'includes/session.php'?>
                     </div>
 
                     <div class="carousel-item">
-                        <img class="w-100 d-block" src="assets/img/slider5.jpg" alt="Slide Image" />
+                        <img class="w-100 d-block" src="img/slider5.jpg" alt="Slide Image" />
                         <div class="description text-center">
                             <br>
                             <h4>Instrumental</h4>

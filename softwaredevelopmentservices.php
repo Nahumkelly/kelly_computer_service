@@ -10,7 +10,8 @@ $result = $crud->getSpecialties();
         <div>
             <div class="row">
                 <div class="col">
-                    <h2 class="text-center text-primary shadow-sm"><br><br><strong>Software Development Services</strong><br><br><img src="assets/img/software-development.png"><br></h2>
+                    <h2 class="text-center text-primary shadow-sm"><br><br><strong>Software Development Services</strong><br>
+                    <img src="img/software-development.png"><br></h2>
                 </div>
             </div>
             <div class="row">
@@ -22,7 +23,7 @@ $result = $crud->getSpecialties();
             </div>
             <div class="row">
                 <div class="col">
-                    <h2 class="text-center text-primary shadow-sm"><strong>IT INFRASTRUCTURE COMPONENTS OUR MANAGED IT SERVICES TACKLE</strong><br><br></h2>
+                    <h2 class="text-center text-primary shadow-sm"><strong>IT INFRASTRUCTURE COMPONENTS OUR MANAGED IT SERVICES TACKLE</strong><br></h2>
                     <div class="row">
                         <div class="col">
                             <div class="card text-light bg-primary text-left border rounded-0 shadow" style="font-size: 18px;text-align: left;">
@@ -32,6 +33,7 @@ $result = $crud->getSpecialties();
                                 </div>
                             </div>
                         </div>
+                        <br/>
                         <div class="col">
                             <div class="card text-light bg-primary text-left border rounded-0 shadow" style="font-size: 18px;text-align: left;">
                                 <div class="card-body">
@@ -42,6 +44,7 @@ $result = $crud->getSpecialties();
                                 </div>
                             </div>
                         </div>
+                        <br/>
                         <div class="col">
                             <div class="card text-light bg-primary text-left border rounded-0 shadow" style="font-size: 18px;text-align: left;">
                                 <div class="card-body">
@@ -52,6 +55,7 @@ $result = $crud->getSpecialties();
                             </div>
                         </div>
                     </div>
+                    <br/>
                     <div class="row">
                         <div class="col">
                             <div class="card text-light bg-primary text-left border rounded-0 shadow" style="font-size: 18px;text-align: left;">
@@ -61,6 +65,7 @@ $result = $crud->getSpecialties();
                                 </div>
                             </div>
                         </div>
+                        <br/>
                         <div class="col">
                             <div class="card text-light bg-primary text-left border rounded-0 shadow" style="font-size: 18px;text-align: left;">
                                 <div class="card-body">
@@ -69,6 +74,7 @@ $result = $crud->getSpecialties();
                                 </div>
                             </div>
                         </div>
+                        <br/>
                         <div class="col">
                             <div class="card text-light bg-primary text-left border rounded-0 shadow" style="font-size: 18px;text-align: left;">
                                 <div class="card-body">
@@ -87,28 +93,31 @@ $result = $crud->getSpecialties();
     <div class="projects-horizontal">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center text-primary shadow-sm"><strong>SELECTED PROJECTS</strong><br><br><img src="assets/img/software-development.png"><br></h2>
+                <h2 class="text-center text-primary shadow-sm"><strong>SELECTED PROJECTS</strong>
+                <br><img src="img/software-development.png"><br></h2>
             </div>
             <div class="row projects">
                 <div class="col item">
                     <div class="row">
-                        <div class="col-1 col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/schema-data-poclain.png" width="200px"></a></div>
+                        <div class="col-1 col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="img/schema-data-poclain.png" width="200px"></a></div>
                         <div class="col">
                             <h3 class="name"><strong>Big Data Implementation for Advertising Channel Analysis in 10+ Countries</strong></h3>
                             <p class="description">Migration to a new analytical system that ScienceSoft implemented helped one of the top market research companies secure an innovative big data solution based on Apache Hadoop, Apache Hive and Apache Spark frameworks. The new
                                 system was 100 times faster compared to the old one and could process 1,000 different data formats.</p>
                         </div>
                     </div>
+                    <br/>
                     <div class="row">
-                        <div class="col-1 col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/unnamed.png" width="200px"></a></div>
+                        <div class="col-1 col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="img/unnamed.png" width="200px"></a></div>
                         <div class="col">
                             <h3 class="name"><strong>Development of Mobile Video Streaming Apps for a TV Industry Leader</strong><br></h3>
                             <p class="description">A success story of a long-term partnership (over 5.5 years) which has brought the Customer to become one of the leading TV apps providers in the world. Created with ScienceSoft's help, the company's star product – hybrid mobile
                                 apps – now power T-Mobile, Orange and other telecom industry leaders..</p>
                         </div>
                     </div>
+                    <br/>
                     <div class="row">
-                        <div class="col-1 col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="assets/img/web.jpg" width="200px"></a></div>
+                        <div class="col-1 col-md-12 col-lg-5"><a href="#"><img class="img-fluid" src="img/web.jpg" width="200px"></a></div>
                         <div class="col">
                             <h3 class="name"><strong>Development of Alternative Web Browser Software for Mac</strong><br></h3>
                             <p class="description">A success story of a long-term partnership (over 5.5 years) which has brought the Customer to become one of the leading TV apps providers in the world. Created with ScienceSoft's help, the company's star product – hybrid mobile

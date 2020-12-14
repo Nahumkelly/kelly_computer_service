@@ -1,8 +1,7 @@
 <?php
  $title = "editpost";
- require_once "includes/header2.php";
  require_once 'db/conn.php';
-
+ //require_once "includes/headers.php";
 //get values from post opertion
 if (isset($_POST['submit'])) {
     $id =$_POST['id'];
@@ -20,7 +19,7 @@ if (isset($_POST['submit'])) {
     move_uploaded_file($orig_file,$destination);
 
     //call functionto insert and track is success or not
-    $result = $crud->editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty, $destination);
+    $result = $crud->editCustomer($id, $fname, $lname, $dob, $email, $contact, $specialty, $destination);
 
     if ($result) {
         header("location: viewrecords.php");

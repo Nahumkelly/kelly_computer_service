@@ -11,21 +11,20 @@ class crud
     }
 
     //function to insert a new record into the attendee database
-    public function insert($fname, $lname, $dob, $email, $contact, $specialty,$avatar_path)
+    public function insertCustomer($fname, $lname, $email, $caddress, $gender, $avatar_path)
     {
         try {
             //define all sql statemnet to be execution
-            $sql = "INSERT INTO attendee (firstname,lastname,dateofbirth,emailaddress,contactnumber,specialty_id,avatar_path) VALUES (:fname, :lname, :dob, :email, :contact,:specialty,:avatar_path)";
+            $sql = "INSERT INTO `customer` (`firstname`, `lastname`, `email`, `customer_address`, `gender_id`, `profile_pic`) VALUES (:fname, :lname, :email, :caddress,:gender,:avatar_path)";
             //prepare the sql statement for execution
             $stmt = $this->db->prepare($sql);
             //biind all placeholderto the actual values
             $stmt->bindparam(':fname', $fname);
             $stmt->bindparam(':lname', $lname);
-            $stmt->bindparam(':dob', $dob);
             $stmt->bindparam(':email', $email);
-            $stmt->bindparam(':contact', $contact);
-            $stmt->bindparam(':specialty', $specialty);
-            $stmt->bindparam(':avatar_path', $avatar_path);
+            $stmt->bindparam(':customer_address', $caddress);
+            $stmt->bindparam(':gender_id', $gender);
+            $stmt->bindparam(':profile_pic', $avatar_path);
 
             //Execute Statement
             $stmt->execute();
@@ -37,22 +36,20 @@ class crud
     }
 
 
-    public function editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty)
+    public function editCustomer($id, $fname, $lname, $email, $caddress, $gender, $avatar_path)
     {
         try {
-            $sql = "UPDATE `attendee` SET `firstname`=:fname,`lastname`=:lname,`dateofbirth`=:dob,
-            `emailaddress`=:email,`contactnumber`=:contact,`specialty_id`=:specialty
-            WHERE attendee_id =:id";
+            $sql = "UPDATE `customer` SET `firstname`=:fname,`lastname`=:lname,`email`=:email,`customer_address`=:caddress,`gender_id`=:gender,`profile_pic`=:avatar_path
+            WHERE `custid` =:id";
 
             $stmt = $this->db->prepare($sql);
             //biind all placeholderto the actual values
             $stmt->bindparam(':id', $id);
             $stmt->bindparam(':fname', $fname);
             $stmt->bindparam(':lname', $lname);
-            $stmt->bindparam(':dob', $dob);
-            $stmt->bindparam(':email', $email);
-            $stmt->bindparam(':contact', $contact);
-            $stmt->bindparam(':specialty', $specialty);
+            // $stmt->bindparam(':email', $email);
+            $stmt->bindparam(':caddress', $caddress);
+            $stmt->bindparam(':gender', $gender);
             //Execute Statement
             $stmt->execute();
             return true;
@@ -62,10 +59,10 @@ class crud
         }
     }
 
-    public function getAttendees()
+    public function gettCustomer()
     {
         try {
-            $sql = "SELECT * FROM `attendee` a inner join `specialties` s on a.specialty_id = s.specialty_id";
+            $sql = "SELECT * FROM `customer` a inner join `gender` g on a.gender_id = g.genid";
             $result = $this->db->query($sql);
             return $result;
         } catch (PDOException $e) {
@@ -74,10 +71,10 @@ class crud
         }
     }
 
-    public function getAttendeesDetails($id)
+    public function getCustomerDetails($id)
     {
         try {
-            $sql = "SELECT * FROM `attendee`a inner join `specialties` s on a.specialty_id = s.specialty_id WHERE attendee_id = :id";
+            $sql = "SELECT * FROM `customer` a inner join `gender` g on a.gender_id = g.genid WHERE `custid` =:id";
             $stmt = $this->db->prepare($sql);
             $stmt->bindparam(':id', $id);
             $stmt->execute();
@@ -89,11 +86,11 @@ class crud
         }
     }
 
-    public function deletAttendee($id)
+    public function deletCustomer($id)
     {
 
         try {
-            $sql = "DELETE FROM `attendee` WHERE  attendee_id =:id";
+            $sql = "DELETE FROM `customer` WHERE `custid` =:id";
             $stmt = $this->db->prepare($sql);
             $stmt->bindparam(':id', $id);
             $stmt->execute();
@@ -104,10 +101,10 @@ class crud
         }
     }
 
-    public function getSpecialties()
+    public function getGender()
     {
         try {
-            $sql = "SELECT * FROM `specialties`";
+            $sql = "SELECT * FROM `gender`";
             $result = $this->db->query($sql);
             return $result;
         } catch (PDOException $e) {
@@ -116,9 +113,10 @@ class crud
         }
     }
 
-    public function getSpecialtyById($id){
+    public function getGendeById($id)
+    {
         try {
-            $sql = "SELECT * FROM specialties WHERE specialty_id = :id";
+            $sql = "SELECT * FROM gender WHERE genid = :id";
             $stmt = $this->db->prepare($sql);
             $stmt->bindparam(':id', $id);
             $stmt->execute();

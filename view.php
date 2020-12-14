@@ -1,16 +1,16 @@
 <?php
 $title = "View Record";
-require_once "includes/header2.php";
 require_once 'includes/auth_check.php';
 require_once 'db/conn.php';
+require_once "includes/headers.php";
 
-//get Attendee by Id
+//get Customer by Id
 if (!isset($_GET['id'])) {
     include 'includes/errormessage.php';
     header('location : viewrecords.php');
 } else {
     $id = $_GET['id'];
-    $result = $crud->getAttendeesDetails($id);
+    $result = $crud->getCustomerDetails($id);
     include 'includes/successmessage.php';
 ?>
 

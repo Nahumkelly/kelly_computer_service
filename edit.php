@@ -1,11 +1,11 @@
 <?php 
         $title = "Edit";
-        require_once "includes/header2.php";
         require_once 'includes/auth_check.php';
         require_once 'db/conn.php';
+        require_once "includes/headers.php";
 
-        //get all Specialties
-        $result = $crud->getSpecialties();
+        //get all Gender
+$result = $crud->getGender();
 
         if(!isset($_GET['id']))
         {
@@ -14,7 +14,7 @@
             //header('location : viewrecords.php');
         }else{
             $id = $_GET['id'];
-            $attendee = $crud->getAttendeesDetails($id); 
+            $attendee = $crud->getcustomerDetails($id); 
 ?>
 
 <h1 class="text-center">Edit Record</h1>

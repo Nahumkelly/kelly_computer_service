@@ -9,7 +9,7 @@ if (!$_GET) {
     $id = $_GET['id'];
 
     //Call Delete Function
-    $result = $crud->deletAttendee($id);
+    $result = $crud->deletCustomer($id);
 
     //Redirect to List
     if ($result) {

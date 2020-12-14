@@ -3,13 +3,15 @@ $title = "Managed IT Services";
 require_once "includes/header.php";
 require_once 'db/conn.php';
 
-//get all Specialties
-$result = $crud->getSpecialties();
+//get all Gender
+$result = $crud->getGender();
 ?>
         <div>
             <div class="row">
                 <div class="col">
-                    <h2 class="text-center text-primary shadow-sm"><br><strong>Managed IT Services for Stable and Reliably Evolving IT Environment</strong><img src="assets/img/ManagedIT.png"><br></h2>
+                    <h2 class="text-center text-primary shadow-sm"><br><strong>Managed IT Services for Stable and Reliably Evolving IT Environment</strong>
+                    <br>
+                    <img src="assets/img/ManagedIT.png"><br></h2>
                 </div>
             </div>
             <div class="row">
@@ -17,7 +19,7 @@ $result = $crud->getSpecialties();
                     <p class="lead text-left">Managed IT services are aimed at handing over your IT operations to a third-party IT services provider, which takes responsibility to ensure high efficiency and timely improvement of your IT environment and processes within it.<br></p>
                     <p
                         class="lead text-left"><strong>Managed IT services by Kelly's Computer Service backed with 12 years of experience in ITSM</strong>&nbsp;span the&nbsp;<strong>all-round support for cloud, on-premises and hybrid infrastructures</strong>&nbsp;and include consulting
-                        and migration services for proactive IT evolution.<br><br></p>
+                        and migration services for proactive IT evolution.<br></p>
                 </div>
             </div>
             <div class="row">
@@ -55,8 +57,9 @@ $result = $crud->getSpecialties();
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col"><img class="rounded img-fluid" src="assets/img/networkinfer.png"></div>
+                        <div class="col"><img class="rounded img-fluid" src="img/networkinfer.png"></div>
                     </div>
+                    <br/>
                     <div class="row">
                         <div class="col">
                             <div class="card text-light bg-primary text-left border rounded-0 shadow" style="font-size: 18px;text-align: left;">
@@ -75,6 +78,7 @@ $result = $crud->getSpecialties();
                                 </div>
                             </div>
                         </div>
+                        <br/>
                         <div class="col">
                             <div class="card text-light bg-primary text-left border rounded-0 shadow" style="font-size: 18px;text-align: left;">
                                 <div class="card-body">
@@ -89,6 +93,7 @@ $result = $crud->getSpecialties();
                                 </div>
                             </div>
                         </div>
+                        <br/>
                         <div class="col">
                             <div class="card text-light bg-primary text-left border rounded-0 shadow" style="font-size: 18px;text-align: left;">
                                 <div class="card-body">

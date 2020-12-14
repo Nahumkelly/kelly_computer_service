@@ -1,6 +1,6 @@
 <?php
 $title = 'User Login';
-require_once 'includes/header2.php';
+require_once 'includes/headers.php';
 require_once 'db/conn.php';
 
 // If data was submitted via a form request, then...
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     <div class="col=ml">
         <div>
-            <p style="text-align: center;"> <img class="center" src="assets\img\Login.png" alt="Nahum" width="150&quot;" height="150&quot;"> </p>
+            <p style="text-align: center;"> <img class="center" src="img\Login.png" alt="Nahum" width="150&quot;" height="150&quot;"> </p>
                 
         </div>
 
@@ -62,5 +62,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <br>
 
 <?php
-// include_once 'includes/footer.php';
+include_once 'includes/footer.php';
 ?>
