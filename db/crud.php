@@ -36,20 +36,21 @@ class crud
     }
 
 
-    public function editCustomer($id, $fname, $lname, $email, $caddress, $gender, $avatar_path)
+    public function editCustomer($id, $fname, $lname, $email, $address, $gender, $avatar_path)
     {
         try {
-            $sql = "UPDATE `customer` SET `firstname`=:fname,`lastname`=:lname,`email`=:email,`customer_address`=:caddress,`gender_id`=:gender,`profile_pic`=:avatar_path
-            WHERE `custid` =:id";
+            $sql = "UPDATE `customer` SET `firstname`=:fname,`lastname`=:lname,`email`=:email,`customer_address`=:address,`gender_id`=:gender,`profile_pic`=:avatar_path
+             WHERE `customer_id` =:id";
 
             $stmt = $this->db->prepare($sql);
             //biind all placeholderto the actual values
             $stmt->bindparam(':id', $id);
             $stmt->bindparam(':fname', $fname);
             $stmt->bindparam(':lname', $lname);
-            // $stmt->bindparam(':email', $email);
-            $stmt->bindparam(':caddress', $caddress);
+            $stmt->bindparam(':email', $email);
+            $stmt->bindparam(':caddress', $address);
             $stmt->bindparam(':gender', $gender);
+            $stmt->bindparam(':avatar_path', $avatar_path);
             //Execute Statement
             $stmt->execute();
             return true;
@@ -90,7 +91,7 @@ class crud
     {
 
         try {
-            $sql = "DELETE FROM `customer` WHERE `custid` =:id";
+            $sql = "DELETE FROM `customer` WHERE `customer_id` =:id";
             $stmt = $this->db->prepare($sql);
             $stmt->bindparam(':id', $id);
             $stmt->execute();

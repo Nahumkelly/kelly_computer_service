@@ -2,7 +2,7 @@
 $title = "View Record";
 // require_once 'includes/auth_check.php';
 require_once 'db/conn.php';
-require_once "includes/headers.php";
+require_once "includes/header.php";
 
 //get Customer by Id
 if (!isset($_GET['id'])) {
@@ -11,7 +11,7 @@ if (!isset($_GET['id'])) {
 } else {
     $id = $_GET['id'];
     $result = $crud->getCustomerDetails($id);
-    // include 'includes/successmessage.php';
+    include 'includes/successmessage.php';
 ?>
 
     <div class="row">

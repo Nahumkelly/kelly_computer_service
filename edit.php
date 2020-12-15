@@ -1,98 +1,105 @@
-<?php 
-        $title = "Edit";
-        require_once 'includes/auth_check.php';
-        require_once 'db/conn.php';
-        require_once "includes/headers.php";
+<?php
+$title = "Edit";
+// require_once 'includes/auth_check.php';
+require_once 'db/conn.php';
+require_once "includes/header.php";
 
-        //get all Gender
+//get all Gender
 $result = $crud->getGender();
 
-        if(!isset($_GET['id']))
-        {
-            //echo 'Error';
-            //include 'includes/errormessage.php';
-            //header('location : viewrecords.php');
-        }else{
-            $id = $_GET['id'];
-            $attendee = $crud->getcustomerDetails($id); 
+if (!isset($_GET['id'])) {
+    //echo 'Error';
+    include 'includes/errormessage.php';
+    header('location : viewrecords.php');
+} else {
+    $id = $_GET['id'];
+    $customer = $crud->getcustomerDetails($id);
 ?>
 
-<h1 class="text-center">Edit Record</h1>
+    <div class="container-fluid">
+        <h1 class="text-primary">Edit Custmer Information</h1>
+        <hr>
+        <form method="post" enctype="multipart/form-data" action="editpost.php">
 
-<div class="row">
-    <div class="col">
-      <!-- 1 of 3 -->
-    </div>
-    <div class="col-xl">
-    <form method="post" action="editpost.php">
-    <input type="hidden" name="id" value=" <?php echo $attendee['attendee_id'] ?>" />
-
-    <div class="form-group">
-        <label for="firstname">First Name</label>
-        <input type="text" class="form-control" value="<?php echo $attendee['firstname'] ?>" id="firstname"
-            name="firstname" style="background-color: rgb(253, 249, 5); color: black">
-    </div>
-
-    <div class="form-group">
-        <label for="lastname">Last Name</label>
-        <input type="text" class="form-control" value="<?php echo $attendee['lastname'] ?>" id="lastname"
-            name="lastname" style="background-color: rgb(253, 249, 5); color: black">
-    </div>
-
-    <div class="form-group">
-        <label for="dob">Date of Birth</label>
-        <input type="text" class="form-control" value="<?php echo $attendee['dateofbirth'] ?>" id="dob" name="dob"
-            style="background-color: rgb(253, 249, 5); color: black">
-    </div>
-
-    <div class="form-group">
-        <label for="speciality">Area of Expertise</label>
-        <select class="form-control" id="speciality" name="speciality"
-            style="background-color: rgb(253, 249, 5); color: black">
-            <?php while ($r =$result->fetch(PDO::FETCH_ASSOC)) {?>
-            <option value="<?php echo $r['specialty_id']; ?>" <?php if($r['specialty_id']== 
-            $attendee['specialty_id']) echo 'selected'?>>
-                <?php echo $r['name']; ?>
-            </option>
-            <?php } ?>
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" class="form-control" value="<?php echo $attendee['emailaddress'] ?>" id="email" name="email"
-            aria-describedby="emailHelp" style="background-color: rgb(253, 249, 5); color: black">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-
-    <div class="form-group">
-        <label for="phone">Contact</label>
-        <input type="text" class="form-control" value="<?php echo $attendee['contactnumber'] ?>" id="phone" name="phone"
-            aria-describedby="phoneHelp" style="background-color: rgb(253, 249, 5); color: black">
-        <small id="phoneHelp" class="form-text text-muted">We'll never share your Contact Number with anyone
-            else.</small>
-    </div>
-
-    <div class="custom-file">
-                <input type="file" accept="image/*" class="custom-file-input" value="<?php echo $attendee['avatar_path'] ?> id="avatar" name="avatar" style="background-color: rgb(253, 249, 5); color: black">
-                <label class="custom-file-label" for="avatar"  style="background-color: rgb(253, 249, 5); color: black">Choose file</label>
-                <small id="avatar" class="form-text text-danger">File Upload is Optional.</small>         
+            <div class="container-fluid">
+                <input type="hidden" name="id" value=" <?php echo $customer['customer_id'] ?>" />
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input required type="text" value=" <?php echo $customer['firstname'] ?>" class="form-control" id="firstname" name="firstname" style="background-color: rgb(0, 102, 255); color: white">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input required type="text" value=" <?php echo $customer['lastname'] ?>" class="form-control" id="lastname" name="lastname" style="background-color: rgb(0, 102, 255); color: white">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-              
-    <button type="submit" name="submit" class="btn btn-success btn-block">Save Changes</button>
-    <a href="viewrecords.php"class=" btn btn-danger btn-block">Cancel </a>
-    
-</form>
-    </div>
-    <div class="col">
-      <!-- 3 of 3 -->
-    </div>
-  </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input required type="email" value=" <?php echo $customer['email_address'] ?>" class="form-control" id="email" name="email" aria-describedby="emailHelp" style="background-color: rgb(0, 102, 255); color: white" readonly>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input required type="text" value=" <?php echo $customer['cus_address'] ?>" class="form-control" id="address" name="address" style="background-color: rgb(0, 102, 255); color: white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="custom-file">
+                            <label class="custom-file-label" for="avatar" value="<?php echo $customer['profile_pic'] ?> style="background-color: rgb(0, 102, 255); color: white">Choose file</label>
+                            <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar" style="background-color: rgb(0, 102, 255); color: white">
+                            <small id="avatar" class="form-text text-danger">File Upload is Optional.</small>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" id="gender" name="gender" style="background-color: rgb(0, 102, 255); color: white">
+                        <?php while ($r = $result->fetch(PDO::FETCH_ASSOC)) { ?>
+                            <option value="<?php echo $r['gender_id']; ?>"<?php if (
+                                    $r['gender_id'] == $customer['gender_id']) echo 'selected' ?>>
+                                    <?php echo $r['name']; ?>
+                                    </option>
+                        <?php } ?>
+                    </select>
+                </div>
+                </div>
+
+                
+                </div>
+            </div>
 
 
-<?php }?>
+            <br />
+            <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
+            <a href="viewrecords.php" class=" btn btn-danger btn-block">Cancel </a>
+
+
+            < <br />
+        </form>
+        <br />
+    </div>
+
+
+
+<?php } ?>
 <hr />
 <br />
 
-<?php require_once "includes/footer.php";?>
+<?php require_once "includes/footer.php"; ?>

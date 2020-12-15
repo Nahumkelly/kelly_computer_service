@@ -1,6 +1,6 @@
 <?php
 $title = "Contact";
-require_once "includes/headers.php";
+require_once "includes/header.php";
 require_once 'db/conn.php';
 
 //get all Gender

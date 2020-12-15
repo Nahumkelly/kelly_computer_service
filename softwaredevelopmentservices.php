@@ -1,6 +1,7 @@
 <?php
 $title = "Software Development Services";
 require_once "includes/header.php";
+require_once "includes/banner.php";
 require_once 'db/conn.php';
 
 //get all Specialties
