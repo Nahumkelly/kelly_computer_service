@@ -4,7 +4,7 @@ require_once "includes/header.php";
 require_once 'db/conn.php';
 
 //get all Specialties
-$result = $crud->getSpecialties();
+$result = $crud->getGender();
 ?>
     
         <div>

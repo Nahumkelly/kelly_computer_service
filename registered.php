@@ -4,7 +4,7 @@ require_once "includes/headers.php";
 require_once 'db/conn.php';
 
 //get all Gender
-$result = $crud->getGender();
+$result=$crud->getGender();
 ?>
 <div class="container-fluid">
     <h1 class="text-primary">Registeration Information</h1>
@@ -38,8 +38,8 @@ $result = $crud->getGender();
             </div>
             <div class="col">
                 <div class="form-group">
-                    <label for="customer_address">Address</label>
-                    <input required type="text" class="form-control" id="customer_address" name="customer_address" style="background-color: rgb(0, 102, 255); color: white">
+                    <label for="address">Address</label>
+                    <input required type="text" class="form-control" id="address" name="address" style="background-color: rgb(0, 102, 255); color: white">
                 </div>
             </div>
             </div>
@@ -59,7 +59,7 @@ $result = $crud->getGender();
                     <label for="gender">Gender</label>
                     <select class="form-control" id="gender" name="gender" style="background-color: rgb(0, 102, 255); color: white">
                         <?php while ($r = $result->fetch(PDO::FETCH_ASSOC)) { ?>
-                            <option value="<?php echo $r['genid']; ?>"><?php echo $r['gen_name']; ?></option>
+                            <option value="<?php echo $r['gender_id']; ?>"><?php echo $r['name']; ?></option>
                         <?php } ?>
                     </select>
                 </div>
