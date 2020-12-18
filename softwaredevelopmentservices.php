@@ -5,10 +5,10 @@ require_once "includes/header.php";
 require_once "includes/banner.php";
 require_once 'db/conn.php';
 
-//get all Specialties
+//get all gender
 $result = $crud->getGender();
 ?>
-    
+    <div>
         <div>
             <div class="row">
                 <div class="col">
@@ -128,6 +128,7 @@ $result = $crud->getGender();
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </div>
     <?php require_once "includes/footer.php"; ?>
