@@ -6,13 +6,6 @@
             $key = '66A4AAC8F29C0657F7E1DD256E658AD5C636D019AAC65F3A3E32E4F3AB6777E5432829E0EDEB84C18A917D37D0EB4280';
             $url = 'https://api.elasticemail.com/v2/email/send';
 
-              // $email = new \SendGrid\Mail\Mail();
-            // $email->setFrom("nahum_kelly@yahoo.com", "Nahum Kelly");
-            // $email->setSubject($subject);
-            // $email->addTo($to);
-            // $email->addContent("text/plain", $content);
-            // //$email->addContent("text/html", $content);
-
             try {
 
                 $email = array('from' => 'nahumkelly73@gmail.com',

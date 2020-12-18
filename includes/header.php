@@ -49,19 +49,19 @@ include_once 'includes/session.php'?>
                     <div><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
                     <div class="collapse navbar-collapse" id="navcol-2">
                         <ul class="nav navbar-nav nav-right">
-                            <li class="nav-item"><a class="nav-link active" href="index.php" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">Home </a></li>
-                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Services </a>
+                            <li class="nav-item"><a class="nav-link <?php if($page == "home"){echo 'active';}?>" href="index.php" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">Home </a></li>
+                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link <?php if($page == "dropdown"){echo 'active';}?>" data-toggle="dropdown" aria-expanded="false" href="#" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">Services </a>
                                 <div class="dropdown-menu" style="background: rgb(0,123,255);">
-                                <a class="dropdown-item" href="manageditservices.php" style="color: rgb(251,1,1);">Managed IT Services</a>
+                                <a class="dropdown-item " href="manageditservices.php" style="color: rgb(251,1,1);">Managed IT Services</a>
                                 <a class="dropdown-item" href="softwaredevelopmentservices.php" style="color: rgb(251,1,1);">Software Development Services</a>
                                 <a class="dropdown-item" href="services.html" style="color: rgb(251,1,1);">Price Packages</a>
                                 </div>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Product</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.php">About </a></li>
-                            <li class="nav-item"><a class="nav-link" href="policy.php">Privacy Policy<br></a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.php">Contact </a></li>
-                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link <?php if(!isset($_SESSION['userid'])){echo"invisible"; }?>" data-toggle="dropdown" aria-expanded="false" href="#">Admin Panel</a>
+                            <li class="nav-item"><a class="nav-link <?php if($page == "product"){echo 'active';}?>" href="#" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">Product</a></li>
+                            <li class="nav-item"><a class="nav-link <?php if($page == "aboutus"){echo 'active';}?>" href="about.php" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">About </a></li>
+                            <li class="nav-item"><a class="nav-link <?php if($page == "policy"){echo 'active';}?>" href="policy.php" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">Privacy Policy<br></a></li>
+                            <li class="nav-item"><a class="nav-link <?php if($page == "contact"){echo 'active';}?>" href="contact.php" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">Contact </a></li>
+                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link <?php if($page == "admin"){echo 'active';}?>  <?php if(!isset($_SESSION['userid'])){echo"invisible"; }?>" data-toggle="dropdown" aria-expanded="false" href="#">Admin Panel</a>
                                     <div class="dropdown-menu" style="background: rgb(0,123,255);">
                                     <a class="dropdown-item" href="viewrecords.php" style="color: rgb(251,1,1);">View Customers</a>
                                     <a class="dropdown-item" href="softwaredevelopmentservices.html" style="color: rgb(251,1,1);">View Products</a>
@@ -76,13 +76,13 @@ include_once 'includes/session.php'?>
                             if(!isset($_SESSION['userid'])){
                         ?>                      
                             <p class="ml-auto navbar-text actions">
-                                 <a class="login" href="login.php">Log In</a> 
+                                 <a class="login" href="login.php" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">Log In</a> 
                             <a class="btn btn-light action-button" role="button" href="registered.php" style="color: rgba(247,249,246,0.9);box-shadow: 0px 0px rgba(84,247,3,0.9);">Sign Up</a>
                             </p>
                         <?php }else {?>  
                             <p class="ml-auto navbar-text actions">
                             <spam style="color: white;">Hello <?php echo $_SESSION['username'] ?>!</spam>
-                            <a class="login" href="logout.php">Log Out</a>
+                            <a class="login" href="logout.php" style="/*color: rgba(251,2,2,0.9);*/text-align: center;font-family: 'Roboto Slab', serif;/*font-size: 21px;*//*border-width: 4px;*//*box-shadow: inset 5px 5px 5px 5px rgba(7,2,251,0.9);*//*text-shadow: 2px 2px 3px rgba(252,251,251,0.9);*//*background: rgb(252,252,252);*/">Log Out</a>
                             </p>
                         <?php }?>                    
                         

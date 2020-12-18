@@ -1,5 +1,6 @@
 <?php
 $title = "Home";
+$page = "home";
 require_once "includes/header.php";
 require_once "includes/banner.php";
 require_once 'db/conn.php';
@@ -11,7 +12,7 @@ $result = $crud->getGender();
     <div>
         <div class="row">
             <div class="col">
-                <h2 class="text-center" style="color: rgb(0,123,255);"><br><strong>About ScienceSoft – Global IT Company</strong><br><br></h2>
+                <h2 class="text-center" style="color: rgb(0,123,255);"><br><strong>About Kelly's Computer Service – Global IT Company</strong><br><br></h2>
             </div>
         </div>
         <div class="row">

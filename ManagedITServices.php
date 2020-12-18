@@ -1,5 +1,6 @@
 <?php
 $title = "Managed IT Services";
+$page = "dropdown";
 require_once "includes/header.php";
 require_once "includes/banner.php";
 require_once 'db/conn.php';
@@ -12,7 +13,7 @@ $result = $crud->getGender();
                 <div class="col">
                     <h2 class="text-center text-primary shadow-sm"><br><strong>Managed IT Services for Stable and Reliably Evolving IT Environment</strong>
                     <br>
-                    <img src="assets/img/ManagedIT.png"><br></h2>
+                    <img src="img/ManagedIT.png"><br></h2>
                 </div>
             </div>
             <div class="row">
@@ -58,7 +59,11 @@ $result = $crud->getGender();
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col"><img class="rounded img-fluid" src="img/networkinfer.png"></div>
+                        <div class="col">
+                            <h3 class="text-center text-primary shadow-sm" >
+                        <img class="rounded img-fluid" src="img/networkinfer.png">
+                        </h3>
+                        </div>
                     </div>
                     <br/>
                     <div class="row">

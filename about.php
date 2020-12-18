@@ -1,5 +1,6 @@
 <?php
 $title = "About Us";
+$page = "aboutus";
 require_once "includes/header.php";
 require_once "includes/banner.php";
 require_once 'db/conn.php';
@@ -15,7 +16,8 @@ $result = $crud->getGender();
 <div class="row">
     <div class="col-10 offset-1">
         <p class="text-left" style="font-size: 20px;"><br>Founded in 2017, Kelly' Computer Service is a provider of&nbsp;<strong>IT consulting</strong>&nbsp;and&nbsp;<strong>software development services</strong>. Having started as a small AI product company, we switched to IT services in 2002
-            and ever since we have helped non-IT organizations and software product companies improve business performance and quickly win new customers.<br><br></p><img class="rounded-circle img-fluid shadow-lg" data-bs-hover-animate="swing" src="assets/img/homepageimage.jpg" width="1000px" height="50ox">
+            and ever since we have helped non-IT organizations and software product companies improve business performance and quickly win new customers.<br><br></p>
+            <img class="rounded-circle img-fluid shadow-lg" data-bs-hover-animate="swing" src="img/homepageimage.jpg" width="1000px" height="500ox">
     </div>
 </div>
 <div class="row">

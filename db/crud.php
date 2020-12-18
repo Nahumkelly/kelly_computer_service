@@ -36,22 +36,45 @@ class crud
     }
 
 
-    public function editCustomer($id, $fname, $lname, $email, $address, $gender, $avatar_path)
-    {
-        try {
-            $sql = "UPDATE `customer` SET `firstname`=:fname,`lastname`=:lname,`email`=:email,`customer_address`=:address,`gender_id`=:gender,`profile_pic`=:avatar_path
-             WHERE `customer_id` =:id";
+    // public function editCustomer($id, $fname, $lname, $email, $address, $gender)
+    // {
+    //     try {
+    //         $sql = "UPDATE `customer` SET `firstname`=:fname,`lastname`=:lname,`email_address`=:email,`cus_address`=:`address`,`gender_id`=:gender,
+    //          WHERE `customer_id` =:id";
 
+    //         // $sql = "UPDATE `customer` SET `firstname`=:fname, `lastname`=:lname,`email_address`=:email WHERE `customer_id` =:id";
+
+    //         $stmt = $this->db->prepare($sql);
+    //         //biind all placeholderto the actual values
+    //         $stmt->bindparam(':id', $id);
+    //         $stmt->bindparam(':fname', $fname);
+    //         $stmt->bindparam(':lname', $lname);
+    //         $stmt->bindparam(':email', $email);
+    //         $stmt->bindparam(':cus_address', $address);
+    //         $stmt->bindparam(':gender', $gender);
+    //        // $stmt->bindparam(':avatar_path', $avatar_path);
+    //         // Execute Statement
+    //         $stmt->execute();
+    //         return true;
+    //     } catch (PDOException $e) {
+    //         echo $e->getMessage();
+    //         return false;
+    //     }
+    // }
+
+    public function editCustomer($id, $fname, $lname, $email, $address, $gender){
+        try {
+            $sql = "UPDATE `customer` SET `firstname`= :fname,`lastname`= :lname,`email_address`= :email,`cus_address`= :cus_address,`gender_id`= :gender WHERE `customer_id` = :id";
+            // prepare the sql statement for excecution
             $stmt = $this->db->prepare($sql);
-            //biind all placeholderto the actual values
+            // bind all placeholders to the actual values
             $stmt->bindparam(':id', $id);
             $stmt->bindparam(':fname', $fname);
             $stmt->bindparam(':lname', $lname);
             $stmt->bindparam(':email', $email);
-            $stmt->bindparam(':caddress', $address);
+            $stmt->bindparam(':cus_address', $address);
             $stmt->bindparam(':gender', $gender);
-            $stmt->bindparam(':avatar_path', $avatar_path);
-            //Execute Statement
+            // execute statement
             $stmt->execute();
             return true;
         } catch (PDOException $e) {

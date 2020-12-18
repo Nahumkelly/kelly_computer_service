@@ -10,8 +10,8 @@ $year = getdate();?>
             <div class="col-sm-6 col-md-3 item">
                 <h3>Services</h3>
                 <ul>
-                    <li><a href="softwaredevelopmentservices.html">Software Development<br></a></li>
-                    <li><a href="ManagedITServices.html">Managed IT Services<br></a></li>
+                    <li><a href="softwaredevelopmentservices.php">Software Development<br></a></li>
+                    <li><a href="manageditservices.php">Managed IT Services<br></a></li>
                 </ul>
             </div>
             <div class="col-sm-6 col-md-3 item">

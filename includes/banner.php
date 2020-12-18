@@ -5,9 +5,9 @@
                         <img src="img/slider1.jpg" alt="Slide Image" class="w-100 d-block" />
                         <div class="description text-center">
                             <br>
-                            <h4>Signs Plus Phoenix Location</h4>
+                            <h4>Kelly' Computer Service</h4>
                             <br>
-                            <form action="storefront_signs.html">
+                            <form action="about.php">
                                 <button type="submit">
               ABOUT US
               </button>
@@ -19,10 +19,10 @@
                         <img class="w-100 d-block" src="img/slider2.jpg" alt="Slide Image" />
                         <div class="description text-center">
                             <br>
-                            <h4>Signs Plus Prescott Location</h4>
+                            <h4>What we do</h4>
                             <br>
-                            <form action="mission_statement.html">
-                                <button type="submit">OUR MISSION &amp; VISION</button>
+                            <form action="manageditservices.PHP">
+                                <button type="submit">OUR SERVICES</button>
                             </form>
                         </div>
                     </div>
@@ -31,15 +31,15 @@
                         <img class="w-100 d-block" src="img/slider3.png" alt="Slide Image" />
                         <div class="description text-center">
                             <br>
-                            <h4>Inventive</h4>
+                            <h4>Inventive Software Development</h4>
                             <br>
-                            <form action="custom_signs.html">
-                                <button type="submit">LEARN ABOUT STORE SIGNAGE
+                            <form action="softwaredevelopmentservices.php">
+                                <button type="submit">LEARN ABOUT OUR SOFTWARE DEVELOPMENT
               </button>
                             </form>
                             <br><br><br><br>
-                            <p1>“The new sign design was inventive, unique and represented my
-                                <br> business as being different than all my competitors...Kudos for a job well done.”
+                            <p1>“Invent, build, integrate, scale and upgrade your applications with Kelly's Computer Service! For more than three decades, Kelly's Computer
+                                <br> Service has been harnessing digital technologies for the benefit of Fortune 500 businesses, mid and large enterprises, and startups across the variety of industries.”
                             </p1>
                         </div>
                     </div>

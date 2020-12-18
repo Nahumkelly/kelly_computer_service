@@ -1,7 +1,7 @@
 <?php
     //Development Connection
     $host = '127.0.0.1';
-    $db = 'kcs_db';
+    $db = 'kellycompterservice';
     $user = 'root';
     $psss = '';
     $charset = 'utf8mb4';
@@ -28,8 +28,12 @@
     require_once 'user.php';
     $crud = new crud($pdo);
     $user = new user($pdo);
+  
 
+     $user->insertuser("admin","@dministrat0r");
      $user->insertuser("admin","password");
      $user->insertuser("nkelly","J@son5667076");
+   
+     
 
 ?>
