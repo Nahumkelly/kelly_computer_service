@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </div>
     <div class="col">
-        <!-- 3 of 3 -->
+       
     </div>
 </div>
 <br>

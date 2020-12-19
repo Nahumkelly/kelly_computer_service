@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
         $GenderName = $crud->getGendeById($gender);
 
         if ($isSuccess) {
-            SendEmail::SendMail($email, 'Welcome to IT Conference 2020', 'Dear ' . $fname . ' '.$lname.',<br><br>This letter is the confirmation of your reservation for the Annual Conference held by the International Computer Association.<br/>This year the conference would be from April 6, 2010, to April 8, 2010.<br/><br/>You have a reserved seat in all the four workshops for the treatment of substance abuse.<br><br/>For any further queries, feel free to write to us or give us a call.<br/><br>Regards. <br/><br>IT Conference Team<br>');
+            SendEmail::SendMail($email, 'Thanks for Joining Kelly Computer Service', 'Dear ' . $fname . ' '.$lname.',<br><br>This is to confirm that you have sign up to be a part of Kellys Computer Service team.<br/><br/>The Management teanm would like to thank you for your usual support.<br/><br>Regards. <br/><br>Customer Service Team<br>');
 
             include 'includes/successmessage.php';
         } else {
@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
                                     <div class="card-body" style="color: white; font-size: 20px;">
                                         <h2 class="card-title">Thank you for Registering with Kelly's Computer Service </h2>
                                         <div> <img class="rounded-circle" src="<?php echo $destination ?>" width="120&quot;" height="120&quot;"/></div>
-                                        <!-- <h4 class="card-subtitle mb-2 text-muted"><?php echo $gender ['name'] ?></h4> -->
+                                        <!-- <--<h4 class="card-subtitle mb-2 text-muted"><?php echo $gender ['name'] ?></h4> --> -->
                                         <h2 class="card-title"><?php echo $_POST['firstname'] . ' ' . $_POST['lastname'] ?></h2>
                                         <h5 class="card-text">Address : <?php echo $_POST['address'] ?></h5>
                                         <h5 class="card-text">Email Address: <?php echo $_POST['email'] ?></h5>
